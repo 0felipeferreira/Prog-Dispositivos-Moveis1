@@ -1,23 +1,30 @@
-import 'dart:io';
-
 void main() {
-  int numero;
+  
+String diaSemana = "sexta";
 
-  print(' ----- Verificação (Impar ou Par) -----');
-  print('');
-  print('Digite um número: ');
-  numero = int.parse(stdin.readLineSync()!);
-
-  print('');
-  print('Resultados: ');
-  verificacao(numero);
-}
-
-void verificacao(int numero) {
-  if (numero % 2 == 0) {
-    print('$numero é par');
-  } else {
-    print('$numero é ímpar');
+  switch (diaSemana.toLowerCase()) {
+    case "segunda":
+      print("Primeiro dia útil da semana!");
+      break;
+    case "terça":
+      print("Segundo dia útil da semana!");
+      break;
+    case "quarta":
+      print("Terceiro dia útil da semana!");
+      break;
+    case "quinta":
+      print("Quarto dia útil da semana!");
+      break;
+    case "sexta":
+      print("Quinto dia útil da semana!");
+      break;
+    case "sábado":
+      print("Dia de descanso!");
+      break;
+    case "domingo":
+      print("Segundo dia de descanso!");
+      break;
+    default:
+      print("Dia inválido!");
   }
 }
-

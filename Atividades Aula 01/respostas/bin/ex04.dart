@@ -1,15 +1,14 @@
 void main() {
 
+  int numeroInt1 = 20;
+  double numeroDouble1 = numeroInt1.toDouble();
+  
+  double numeroDouble2 = 18.2;
+  int numeroInt2 = numeroDouble2.toInt();
+
   print('----- Conversão Int para Double -----');
   print('');
 
-  int numeroInt = 10;
-  double numeroDouble = numeroInt.toDouble(); 
-  
-  print('Int para Double: $numeroDouble');
-  
-  double outroNumeroDecimal = 15.7;
-  int outroNumeroInteiro = outroNumeroDecimal.toInt(); 
-  
-  print('Double para Int: $outroNumeroInteiro');
+  print('Int $numeroInt1 -> Double $numeroDouble1');
+  print('Double $numeroDouble2 -> Int $numeroInt2');
 }

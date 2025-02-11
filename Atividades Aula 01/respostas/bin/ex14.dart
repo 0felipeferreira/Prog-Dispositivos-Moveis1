@@ -1,23 +1,14 @@
-import 'dart:io';
-
-int fatorial(int n) {
-  if (n == 0 || n == 1) {
-    return 1;
-  }
-  return n * fatorial(n - 1);
-}
-
 void main() {
   
-  int numero;
-  int resultado;
+  List<int> numeros = [22, 21, 11, 30, 9, 6, 3, 10, 51, 2];
 
-  print('----- Descubra o valor de Números Fatorados -----');
+  print('Listando números conforme está na lista --> $numeros');
   print('');
 
-  print('Digite um número para calcular o fatorial: ');
-  numero = int.parse(stdin.readLineSync()!);
+  numeros.sort(); // Organizando de forma crescente.
+  print('Listando números ordenados de forma crescente --> $numeros');
+  print('');
 
-  resultado = fatorial(numero);
-  print('$numero! -> $resultado');
+  numeros.sort((a,b) => b.compareTo(a)); // Organizando de forma decrescente.
+  print('Listando números ordenados de forma descrescente --> $numeros');
 }
